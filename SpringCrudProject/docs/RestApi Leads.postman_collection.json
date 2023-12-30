@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "32430ab9-e5a8-47a0-b1d8-a515eb1143a9",
+		"name": "RestApi Leads",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28822601"
+	},
+	"item": [
+		{
+			"name": "Create Lead",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"leadId\": \"5678\",\r\n  \"firstName\": \"Vineet\",\r\n  \"middleName\": \"\",\r\n  \"lastName\": \"KV\",\r\n  \"mobileNumber\": \"8877887788\",\r\n  \"gender\": \"male\",\r\n  \"dob\": \"21/05/2000\",\r\n  \"email\": \"v@gmail.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/createLead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"createLead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lead if exist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"leadId\": \"5678\",\r\n  \"firstName\": \"Vineet\",\r\n  \"middleName\": \"\",\r\n  \"lastName\": \"KV\",\r\n  \"mobileNumber\": \"8877887788\",\r\n  \"gender\": \"male\",\r\n  \"dob\": \"21/05/2000\",\r\n  \"email\": \"v@gmail.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/createLead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"createLead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mobile if not exist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/fetchMobileNumber?mobileNumber=9234567890",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fetchMobileNumber"
+					],
+					"query": [
+						{
+							"key": "mobileNumber",
+							"value": "9234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mobile if Exist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"leadId\": \"4321\",\r\n  \"firstName\": \"Vineet\",\r\n  \"middleName\": \"\",\r\n  \"lastName\": \"KV\",\r\n  \"mobileNumber\": \"8877887788\",\r\n  \"gender\": \"male\",\r\n  \"dob\": \"21/05/2000\",\r\n  \"email\": \"v@gmail.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fetchMobileNumber?mobileNumber=8877887788",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fetchMobileNumber"
+					],
+					"query": [
+						{
+							"key": "mobileNumber",
+							"value": "8877887788"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
